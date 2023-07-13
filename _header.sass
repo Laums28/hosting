@@ -1,0 +1,80 @@
+@use "../variables"
+@use "../typography"
+@use "../base"
+
+
+//Header
+
+.header
+  $gap--header: 8rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 3
+  height: $gap--header
+  box-sizing: border-box
+  background: none
+  &__logo
+    max-width: 90%
+    margin-left: 1rem
+  .container
+    display: flex
+    justify-content: space-between
+  .nav
+    position: fixed
+    inset: 0
+    top: 0
+    z-index: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: translateX(-100vw)
+    transition: .5s
+    &--show
+      transform: translateX(0vw)
+    &__ul
+      list-style: none
+      padding: 0
+    &__link
+      display: block
+      text-decoration: none
+      color: variables.$color__texto-claro
+      font-size: variables.$gap--m
+      padding: variables.$gap--m
+      text-align: center
+      margin-top: 2rem
+  &__brand-link
+    width: 4rem
+  &__button
+    width: 2rem
+    z-index: 99999
+header.abajo
+  background: variables.$color__texto-oscuro
+  height: 4.5rem
+  box-shadow: .1px 5px 20px variables.$color__texto-oscuro
+  transition: .4s
+
+// Burger Menu
+.menu-image
+  position: absolute
+  right: 2rem
+  top: 1.5rem
+  z-index: 2
+  width: 2rem
+.nav__ul
+  background: rgba(21, 25, 40, .5)
+  backdrop-filter: blur(15px)
+  font-family: variables.$tipo_secundaria
+  font-weight: 400
+  width: 100%
+  height: 100%
+  margin: 0
+  align-self: center
+
+.nav__item
+  padding-bottom: 5rem
+.list__container
+  margin-top: 5rem
+
+//---Burger Menu end

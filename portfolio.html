@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lamar | PORTFOLIO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <!--split media -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!--end split media -->
+        <!--java script-->
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <!-- end java script-->
+    </head>
+    <body class="body">
+        <div id="wrapper">
+            <!-- Header -->
+            <header class="header" x-data="{ open: false }">
+                <div class="container">
+                    <!-- Logo principal: botón a la home -->
+                    <a href="index.html" class="header__logo-link">
+                        <img src="img/logo.svg" alt="Logo" class="image header__logo">
+                    </a>
+                    <!-- Menú principal de la web -->
+                    <nav class="nav" :class="open ? 'nav--show' : ''">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <span>
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="index.html" class="nav__link">Home</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Botón hamburguesa para versión mobile -->
+                    <button aria-hidden="true" class="button header__button" @click="open= !open">
+                        <img class="image" :src="open ? 'img/cross.svg' : 'img/burger.svg'" alt="Botón de mostrar/ocultar el menú">
+                    </button>
+                </div>
+            </header>
+            <!-- Header end -->
+            <!-- Portfolio Content -->
+                    <!--Submenu-->
+            <div class="submenu__container">
+                <nav class="submenu">
+                    <ul class="submenu__list">
+                        <li class="submenu__content">
+                            <a href="portfolio.html" class="submenu__link">Diseño Web</a>
+                            <div class="circle"></div>
+                        </li>
+                        <li class="submenu__content">
+                                <a href="portfolio-uxui.html" class="submenu__link">UX/UI</a>
+                                <!--<div class="circle"></div>-->
+                        </li>
+                        <li class="submenu__content">
+                                <a href="portfolio-grafico.html" class="submenu__link">Diseño Gráfico</a>
+                                <!--<div class="circle"></div>-->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!--Galería de imagenes-->
+            <section class="portfolio__container">
+                <!--Artemisa Vermutería-->
+                    <article class="portfolio__container-article artemisa-article">
+                        <div class="portfolio__filter">
+                            <button class="portfolio__filter-text">Diseño web</button>
+                            <button class="portfolio__filter-text branding-filter">Branding</button>
+                        </div>
+                        <p class="name">Artemisa Vermutería</p>
+                        <a href="#" class="button__next">
+                            <img src="img/next.svg" alt="botón para ver el proyecto" class="next button">
+                        </a>
+                    </article>
+                <!--Valencia web -->
+                <article class="portfolio__container-article valencia-article">
+                    <div class="portfolio__filter">
+                        <button class="portfolio__filter-text web-filter">Diseño web</button>
+                    </div>
+                    <p class="name">Web Valencia</p>
+                    <a href="#" class="button__next">
+                        <img src="img/next.svg" alt="botón para ver el proyecto" class="next button">
+                    </a>
+                </article>
+            <!--Chat-->
+                <article class="portfolio__container-article chat-article">
+                    <div class="portfolio__filter">
+                        <button class="portfolio__filter-text web-filter">Diseño web</button>
+                    </div>
+                    <p class="name">Chat con CSS</p>
+                    <a href="#" class="button__next">
+                        <img src="img/next.svg" alt="botón para ver el proyecto" class="next button">
+                    </a>
+                </article>
+            </section>
+            <!-- Portfolio Content end -->
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer__container layout">
+                    <!--Logo + iconos de redes sociales -->
+                    <a href="index.html" class="logo__link">
+                        <img src="img/logo_footer.svg" alt="Logo" class="logo">
+                    </a>
+                    <ul class="icon__list">
+                        <li>
+                            <a href="https://www.instagram.com/" class="link">
+                                <img src="img/instagram.svg" alt="Logo" class="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net" class="link">
+                                <img src="img/behance.svg" alt="Logo" class="behance">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/jobs/" class="link">
+                                <img src="img/linkedin.svg" alt="Logo" class="linkedin">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/" class="link">
+                                <img src="img/dribbble.svg" alt="Logo" class="dribbble">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- La parte de "Navega" del footer -->
+                    <div class="nav__container">
+                        <h2 class="nav__title">Navega</h2>
+                        <ul class="nav__list">
+                            <li>
+                                <a href="portfolio.html" class="nav__list-link">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="nav__list-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="sobre-mi.html" class="nav__list-link">Sobre mi</a>
+                            </li>
+                            <li>
+                                <a href="contacto.html" class="nav__list-link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Enlaces a política de privacidad -->
+                    <div class="politics__container">
+                        <h2 class="politics__title">Políticas</h2>
+                        <ul class="politics__list">
+                            <li>
+                                <a href="#" class="politics__list-link">All Rights Reserved</a>
+                            </li>
+                            <li>
+                                <a href="aviso-legal.html" class="politics__list-link" target="_blank">Aviso Legal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Copyright  de la web -->
+                    <div class="copyright__container">
+                        <p class="copyright__text">  &copy; Copyright 2020 Laura Martínez 2023 </p>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End -->
+        </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+    </body>
+</html>

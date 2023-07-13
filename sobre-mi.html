@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lamar | SOBRE MI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <!--split media -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!--end split media -->
+        <!--java script-->
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <!-- end java script-->
+    </head>
+    <body class="body">
+        <div id="wrapper">
+        <!-- Header -->
+            <header class="header" x-data="{ open: false }">
+                <div class="container">
+                    <!-- Logo principal: botón a la home -->
+                    <a href="index.html" class="header__logo-link">
+                        <img src="img/logo.svg" alt="Logo" class="image header__logo">
+                    </a>
+                    <!-- Menú principal de la web -->
+                    <nav class="nav" :class="open ? 'nav--show' : ''">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <span>
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="index.html" class="nav__link">Home</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                                </span>
+                            </li>
+                            <li class="nav__item">
+                                <span>
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Botón hamburguesa para versión mobile -->
+                    <button aria-hidden="true" class="button header__button" @click="open= !open">
+                        <img class="image" :src="open ? 'img/cross.svg' : 'img/burger.svg'" alt="Botón de mostrar/ocultar el menú">
+                    </button>
+                </div>
+            </header>
+        <!-- Header end -->
+            <!-- Content About me -->
+            <main class="main__container">
+                <!-- About me -->
+                <section class="about__container">
+                    <div class="about__container-img">
+                        <img src="img/title_about-me.svg" alt="título sobre mi" class="img">
+                    </div>
+                    <div class="about__container-text">
+                        <p class="text">Lamar viene de mi nombre, Laura Martínez y soy una diseñadora de UX/UI y web, aunque también he realizado proyectos de diseño gráfico muy relacionados con creación y rediseño de identidades visuales.</p>
+                        <p class="text">He realizado diferentes proyectos como diseño y desarrollo de páginas web así como diseños responsive. Te invito a que eches un vistazo a mi portfolio y veas diferentes diseños hechos la mar de bien.</p>
+                    </div>
+                    <div class="image__container">
+                        <img class="image__container-aboutme" src="img/12.webp" alt="Imagen de cabecera">
+                    </div>
+                </section>
+                <!-- Especialización -->
+                <section>
+                    <div class="icon__container-content">
+                        <h2 class="icon-title">ESTOY ESPECIALIZADA EN</h2>
+                        <div class="icon__container">
+                            <article class="article__container">
+                                <div class="content__container">
+                                    <img src="img/web.svg" alt="Icono de diseño web" class="icon">
+                                    <h3 class="content__container-title">WEB</h3>
+                                    <p class="content__container-text">Diseño y desarrollo de páginas web.</p>
+                                </div>
+                            </article>
+                            <article class="article__container">
+                                <div class="content__container">
+                                    <img src="img/ux-ui.svg" alt="Icono de diseño UX/UI" class="icon">
+                                    <h3 class="content__container-title">UX/UI</h3>
+                                    <p class="content__container-text">Diseño de experiencia al usuario en apps y webs así como diseño de la interfaz.</p>
+                                </div>
+                            </article>
+                            <article class="article__container">
+                                <div class="content__container">
+                                    <img src="img/branding.svg" alt="Icono de Branding" class="icon">
+                                    <h3 class="content__container-title">BRANDING</h3>
+                                    <p class="content__container-text">Creación y rediseño de logos, también diseño la identidad visual para marcas.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <!-- Habilidades -->
+                <section class="skills__container">
+                    <h3 class="skills__title">Mis habilidades como diseñadora</h3>
+                    <div class="skills__container-img">
+                        <img src="img/paper_vertical.webp" alt="Iconos de apps de diseño vertical" class="skills-img">
+                        <img src="img/paper.webp" alt="Iconos de apps de diseño horizontal" class="skills-img-down">
+                    </div>
+                </section>
+                <!--Descargar cv -->
+                <a class="button__container" href="downloads/lauramartinez-cv.pdf" download="lauramartinez-cv.pdf">
+                    <button class="button__cv">Descarga mi cv</button>
+                </a>
+            </main>
+            <!-- Content end -->
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer__container layout">
+                    <!--Logo + iconos de redes sociales -->
+                    <a href="index.html" class="logo__link">
+                        <img src="img/logo_footer.svg" alt="Logo" class="logo">
+                    </a>
+                    <ul class="icon__list">
+                        <li>
+                            <a href="https://www.instagram.com/" class="link">
+                                <img src="img/instagram.svg" alt="Logo" class="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net" class="link">
+                                <img src="img/behance.svg" alt="Logo" class="behance">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/jobs/" class="link">
+                                <img src="img/linkedin.svg" alt="Logo" class="linkedin">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/" class="link">
+                                <img src="img/dribbble.svg" alt="Logo" class="dribbble">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- La parte de "Navega" del footer -->
+                    <div class="nav__container">
+                        <h2 class="nav__title">Navega</h2>
+                        <ul class="nav__list">
+                            <li>
+                                <a href="portfolio.html" class="nav__list-link">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="nav__list-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="sobre-mi.html" class="nav__list-link">Sobre mi</a>
+                            </li>
+                            <li>
+                                <a href="contacto.html" class="nav__list-link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Enlaces a política de privacidad -->
+                    <div class="politics__container">
+                        <h2 class="politics__title">Políticas</h2>
+                        <ul class="politics__list">
+                            <li>
+                                <a href="#" class="politics__list-link">All Rights Reserved</a>
+                            </li>
+                            <li>
+                                <a href="aviso-legal.html" class="politics__list-link" target="_blank">Aviso Legal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Copyright  de la web -->
+                    <div class="copyright__container">
+                        <p class="copyright__text">  &copy; Copyright 2020 Laura Martínez 2023 </p>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer End -->
+        </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+    </body>
+</html>
